@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Kaique ⚽</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* =========================
+   FUNDO
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,0,0,.25),
+    transparent 45%);
+
+    z-index:-3;
+}
+
+/* =========================
+   ESTRELAS
+========================= */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:#ff5555;
+
+    box-shadow:
+    0 0 5px red,
+    0 0 15px red,
+    0 0 25px red;
+
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+/* =========================
+   BOLAS DE FUTEBOL
+========================= */
+
+.footballs{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.ball{
+    position:absolute;
+
+    color:rgba(255,255,255,.05);
+
+    font-size:55px;
+
+    animation:float 18s linear infinite;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    background:
+    rgba(255,0,0,.08);
+
+    border:
+    2px solid #aa0000;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-bottom:40px;
+
+    box-shadow:
+    0 0 15px rgba(255,0,0,.5),
+    0 0 50px rgba(255,0,0,.15);
+
+    backdrop-filter:blur(8px);
+}
+
+.row{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.row img{
+
+    width:300px;
+
+    max-width:100%;
+
+    border-radius:20px;
+
+    border:3px solid red;
+
+    box-shadow:
+    0 0 20px red,
+    0 0 40px rgba(255,0,0,.5);
+}
+
+.texto{
+
+    flex:1;
+    min-width:280px;
+}
+
+.ola{
+
+    color:#ff8b8b;
+
+    font-size:1.2rem;
+
+    margin-bottom:15px;
+}
+
+h1{
+
+    color:#ff4d4d;
+
+    font-size:2.6rem;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 10px red,
+    0 0 20px red;
+}
+
+p{
+
+    line-height:1.9;
+
+    font-size:1.08rem;
+}
+
+.destaque{
+
+    color:#ff9b9b;
+    font-weight:bold;
+}
+
+/* =========================
+   CAFÉ
+========================= */
+
+.cafe{
+
+    text-align:center;
+}
+
+.cafe img{
+
+    width:260px;
+
+    max-width:100%;
+
+    border-radius:20px;
+
+    border:3px solid red;
+
+    box-shadow:
+    0 0 25px red;
+}
+
+.cafe h2{
+
+    margin-top:20px;
+
+    color:#ff6666;
+
+    font-size:2rem;
+}
+
+.botoes{
+
+    margin-top:25px;
+}
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    margin:10px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.sim{
+
+    background:#2ecc71;
+    color:white;
+}
+
+.nao{
+
+    background:#e74c3c;
+    color:white;
+}
+
+button:hover{
+
+    transform:scale(1.07);
+}
+
+.resposta{
+
+    margin-top:20px;
+
+    font-size:1.2rem;
+
+    color:#ffb8b8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    color:#999;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+        text-align:center;
+    }
+
+    .texto{
+        text-align:center;
+    }
+
+    p{
+        font-size:1rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="footballs"></div>
+
+<div class="container">
+
+<!-- INTRODUÇÃO -->
+
+<div class="card">
+
+<div class="row">
+
+<div class="texto">
+
+<p class="ola">
+👋 Olá, Kaique!
+</p>
+
+<h1>
+Bem-vindo a um mini site criado especialmente para você.
+</h1>
+
+<p>
+Olha, sei que não tá mil maravilhas mas eu queria fazer um presente a distância,
+por ter me aturado por tanto tempo mesmo que essa amizade tenha sido apenas virtual,
+mas se tornou algo especial para mim.
+</p>
+
+<br>
+
+<p class="destaque">
+Então receba! ⚽🔥
+</p>
+
+</div>
+
+<img src="GatoNoob.jpeg" alt="Gato Noob">
+
+</div>
+
+</div>
+
+<!-- CAFÉ -->
+
+<div class="card cafe">
+
+<img src="CoffeCat.jpeg" alt="Coffee Cat">
+
+<h2>
+Antes de começar a ler o restante...
+</h2>
+
+<br>
+
+<p>
+Gostaria de um café? ☕
+</p>
+
+<div class="botoes">
+
+<button class="sim" onclick="cafeSim()">
+SIM ☕
+</button>
+
+<button class="nao" onclick="cafeNao()">
+NÃO 😅
+</button>
+
+</div>
+
+<div class="resposta" id="respostaCafe"></div>
+
+</div>
+
+<footer>
+Feito especialmente para Kaique ⚽🔥
+</footer>
+
+</div>
+
+<script>
+
+/* =========================
+   ESTRELAS
+========================= */
+
+const stars =
+document.querySelector(".stars");
+
+for(let i=0;i<180;i++){
+
+    const star =
+    document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left =
+    Math.random()*100 + "%";
+
+    star.style.top =
+    Math.random()*100 + "%";
+
+    star.style.animationDelay =
+    Math.random()*3 + "s";
+
+    stars.appendChild(star);
+}
+
+/* =========================
+   BOLAS
+========================= */
+
+const footballs =
+document.querySelector(".footballs");
+
+for(let i=0;i<18;i++){
+
+    const ball =
+    document.createElement("div");
+
+    ball.classList.add("ball");
+
+    ball.innerHTML = "⚽";
+
+    ball.style.left =
+    Math.random()*100 + "%";
+
+    ball.style.animationDuration =
+    (12 + Math.random()*15) + "s";
+
+    footballs.appendChild(ball);
+}
+
+/* =========================
+   CAFÉ
+========================= */
+
+function cafeSim(){
+
+document.getElementById("respostaCafe").innerHTML =
+"☕ Excelente escolha! Um café sempre ajuda a aproveitar melhor a leitura. 😎";
+}
+
+function cafeNao(){
+
+document.getElementById("respostaCafe").innerHTML =
+"😂 Tudo bem, mas eu tentei oferecer.";
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- =====================================
+     UMA CONVERSA SINCERA
+===================================== -->
+
+<div class="card">
+
+    <div class="row">
+
+        <img src="BasketoMini.jpeg" alt="Basketo Mini">
+
+        <div class="texto">
+
+            <h1 style="font-size:2rem;">
+                ⭐ Uma conversa sincera
+            </h1>
+
+            <p>
+                Olha, primeiramente eu peço mil desculpas por andar sumida assim
+                e não mandar mensagens.
+            </p>
+
+            <br>
+
+            <p>
+                Às vezes eu fico online, posto as coisas e não mando mensagens né??
+                Poxa, aí é de doer o coração...
+            </p>
+
+            <br>
+
+            <p>
+                Mas sabe, sei que isso aqui não justifica.
+            </p>
+
+            <br>
+
+            <p>
+                Durante muito tempo eu sempre corria atrás das minhas amizades
+                e mesmo assim acabava sendo bastante excluída.
+            </p>
+
+            <br>
+
+            <p>
+                Depois que amadureci eu fiquei com receio de mandar mensagem para
+                as pessoas ou procurar elas novamente.
+            </p>
+
+            <br>
+
+            <p>
+                Porque chegou um momento em que comecei a viver apenas com a minha
+                própria companhia.
+            </p>
+
+            <br>
+
+            <p>
+                E por mais confortável que isso pareça,
+                também pode ser perigoso.
+            </p>
+
+            <br>
+
+            <p>
+                Depois que encontrei pessoas verdadeiras,
+                que realmente se importavam comigo,
+                aconteceu algo curioso.
+            </p>
+
+            <br>
+
+            <p>
+                Acabei tendo um efeito "reboot",
+                repetindo sem perceber atitudes que outras pessoas
+                tiveram comigo no passado.
+            </p>
+
+            <br>
+
+            <p>
+                É sério.
+            </p>
+
+            <br>
+
+            <p>
+                Eu tento mudar isso,
+                mas é difícil.
+            </p>
+
+            <br>
+
+            <p>
+                Só que existe uma coisa que seria muito mais difícil:
+            </p>
+
+            <br>
+
+            <p class="destaque">
+                perder amizades que realmente se importam comigo.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     MINHA OPINIÃO SOBRE VOCÊ
+===================================== -->
+
+<div class="card">
+
+    <div class="row">
+
+        <img src="Cavalofuto.jpeg" alt="Cavalo Futuro">
+
+        <div class="texto">
+
+            <h1 style="font-size:2rem;">
+                ⭐ Minha opinião sobre você
+            </h1>
+
+            <p>
+                Você tem a famosa skin do nego doce.
+            </p>
+
+            <br>
+
+            <p>
+                Aquele tipo de pessoa que passa uma impressão de alguém
+                extremamente confiante, talvez até metido ou soberbo.
+            </p>
+
+            <br>
+
+            <p>
+                Mas isso me lembrou algo muito importante:
+            </p>
+
+            <br>
+
+            <p style="
+            color:#ffb3b3;
+            font-size:1.1rem;
+            ">
+
+                <strong>1 Samuel 16:7</strong>
+
+                <br><br>
+
+                <strong><i>
+                "O homem vê a aparência,
+                mas o Senhor vê o coração."
+                </i></strong>
+
+            </p>
+
+            <br>
+
+            <p>
+                Com o passar do tempo eu percebi que você era
+                muito diferente da impressão inicial.
+            </p>
+
+            <br>
+
+            <p>
+                Você me ajudou bastante na minha caminhada com Deus.
+            </p>
+
+            <br>
+
+            <p>
+                Inclusive, no começo eu até pensava que você era um cristão
+                apenas por influência dos outros,
+                mas percebi que não era isso.
+            </p>
+
+            <br>
+
+            <p>
+                Sua fé é algo genuíno.
+            </p>
+
+            <br>
+
+            <p>
+                E mesmo depois de vários vacilos meus,
+                vários vácuos,
+                vários sumiços...
+            </p>
+
+            <br>
+
+            <p>
+                Você escolheu continuar sendo paciente comigo.
+            </p>
+
+            <br>
+
+            <p class="destaque">
+                Muito obrigada de verdade.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     VIDA COM DEUS
+===================================== -->
+
+<div class="card">
+
+    <div class="row">
+
+        <img src="BatmanBiblia.jpeg" alt="Batman Bíblia">
+
+        <div class="texto">
+
+            <h1 style="font-size:2rem;">
+                📖 Vida com Deus
+            </h1>
+
+            <p>
+                Também espero muito que Deus esteja te abençoando
+                na sua vida espiritual.
+            </p>
+
+            <br>
+
+            <p>
+                E que você continue firme nos caminhos dEle.
+            </p>
+
+            <br>
+
+            <p>
+                Fazendo tudo para a glória de Deus.
+            </p>
+
+            <br>
+
+            <p>
+                Buscando crescer espiritualmente todos os dias.
+            </p>
+
+            <br>
+
+            <p>
+                Lendo a Bíblia.
+            </p>
+
+            <br>
+
+            <p>
+                Orando.
+            </p>
+
+            <br>
+
+            <p>
+                Fazendo seu devocional.
+            </p>
+
+            <br>
+
+            <p>
+                Procurando agradar a Deus em suas decisões.
+            </p>
+
+            <br>
+
+            <p>
+                E se algum dia estiver passando por alguma luta,
+                dificuldade ou dúvida,
+                lembre-se de que você não precisa enfrentar tudo sozinho.
+            </p>
+
+            <br>
+
+            <p>
+                Converse com Deus.
+            </p>
+
+            <br>
+
+            <p>
+                Procure pessoas maduras na fé que possam te aconselhar.
+            </p>
+
+            <br>
+
+            <p>
+                Continue caminhando.
+            </p>
+
+            <br>
+
+            <p class="destaque">
+                Eu realmente quero te ver no céu.
+            </p>
+
+            <br>
+
+            <p>
+                Tenho orgulho da pessoa que você está se tornando.
+            </p>
+
+            <br>
+
+            <p>
+                E espero que nunca se perca neste mundo que tantas vezes tenta nos afastar daquilo que realmente importa.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     CONSIDERAÇÕES FINAIS
+===================================== -->
+
+<div class="card">
+
+    <div class="row">
+
+        <img src="Safe.jpeg" alt="Safe">
+
+        <div class="texto">
+
+            <h1 style="font-size:2rem;">
+                🛡️ Considerações finais
+            </h1>
+
+            <p>
+                Talvez este não seja o site mais incrível do mundo.
+            </p>
+
+            <br>
+
+            <p>
+                Talvez ele tenha erros.
+            </p>
+
+            <br>
+
+            <p>
+                Talvez algumas partes tenham ficado simples.
+            </p>
+
+            <br>
+
+            <p>
+                E talvez existam pessoas que fariam algo muito melhor.
+            </p>
+
+            <br>
+
+            <p>
+                Mas a verdade é que eu queria fazer algo para você.
+            </p>
+
+            <br>
+
+            <p>
+                Algo que mostrasse o quanto sua amizade é importante para mim.
+            </p>
+
+            <br>
+
+            <p>
+                Algo feito por mim.
+            </p>
+
+            <br>
+
+            <p>
+                Com meu tempo.
+            </p>
+
+            <br>
+
+            <p>
+                Com minhas ideias.
+            </p>
+
+            <br>
+
+            <p>
+                E principalmente com carinho.
+            </p>
+
+            <br>
+
+            <p>
+                Obrigada por todas as conversas.
+            </p>
+
+            <br>
+
+            <p>
+                Pela paciência.
+            </p>
+
+            <br>
+
+            <p>
+                Pela compreensão.
+            </p>
+
+            <br>
+
+            <p>
+                E por continuar presente mesmo quando eu falho.
+            </p>
+
+            <br>
+
+            <p class="destaque">
+                Sua amizade é muito especial para mim.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     ENCERRAMENTO
+===================================== -->
+
+<div class="card" style="text-align:center;">
+
+    <img
+    src="GodAndSpartan.jpeg"
+    alt="God and Spartan"
+    style="
+    width:400px;
+    max-width:100%;
+    border-radius:20px;
+    margin-bottom:25px;
+    ">
+
+    <h1>
+        ✝️ Encerramento
+    </h1>
+
+    <br>
+
+    <p>
+        E para fechar este pequeno presente,
+        gostaria de deixar um versículo que considero muito bonito:
+    </p>
+
+    <br><br>
+
+    <p style="
+    color:#ffb3b3;
+    font-size:1.2rem;
+    ">
+
+        <strong>1 João 2:28</strong>
+
+        <br><br>
+
+        <strong><i>
+        "Filhinhos, agora, pois, permanecei nele,
+        para que, quando ele se manifestar,
+        tenhamos confiança e dele não nos afastemos
+        envergonhados na sua vinda."
+        </i></strong>
+
+    </p>
+
+    <br><br>
+
+    <p>
+        Que Deus continue guiando seus passos.
+    </p>
+
+    <br>
+
+    <p>
+        Fortalecendo sua fé.
+    </p>
+
+    <br>
+
+    <p>
+        Abençoando seus sonhos.
+    </p>
+
+    <br>
+
+    <p>
+        E te ajudando a permanecer firme
+        em todos os momentos.
+    </p>
+
+    <br>
+
+    <p class="destaque">
+        Obrigada por fazer parte da minha vida. ⚽❤️
+    </p>
+
+</div>
